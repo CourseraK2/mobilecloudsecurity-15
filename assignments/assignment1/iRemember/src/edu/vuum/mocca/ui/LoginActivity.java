@@ -44,10 +44,11 @@ public class LoginActivity extends StoryActivityBase{
 	/**
 	 * Get the file used for storing login credentials
 	 */
+	//Fixed -  with security settings set to private (does not write to external storage)
 	public static File getLoginFile (Context context) {
 		return StorageUtilities.getOutputMediaFile(context, 	// Line 48
 				StorageUtilities.MEDIA_TYPE_TEXT, 
-				MAX_SECURITY, 
+				StorageUtilities.SECURITY_PRIVATE, 
 				"login.txt");
 	}
 	
